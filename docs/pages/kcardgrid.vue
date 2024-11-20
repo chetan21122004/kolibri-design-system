@@ -84,9 +84,23 @@
           </tr>
         </DocsTable>
       </DocsToggleContent>
+      <DocsExample>
 
-      <DocsShow block>
-        <KCardGrid
+          <template #code>
+            <DocsShowCode language="html">
+              <KCardGrid layout="1-1-1">
+                <KCard
+                  v-for="i in 2"
+                  :key="i"
+                  :headingLevel="5"
+                  orientation="horizontal"
+                  :prependTitle="`(${i})`"
+                />
+              </KCardGrid>
+            </DocsShowCode>
+          </template>
+
+        <KCardGrid 
           layout="1-1-1"
           :skeletonsConfig="skeletonsConfig1"
           :loading="loading"
@@ -99,18 +113,12 @@
             :prependTitle="`(${i})`"
           />
         </KCardGrid>
-      </DocsShow>
+    
+      
+      </DocsExample>
+      
 
-      <!-- eslint-disable -->
-      <DocsShowCode language="html">
-        <KCardGrid layout="1-1-1">
-          <KCard
-            v-for="i in 2"
-            ...
-          />
-        </KCardGrid>
-      </DocsShowCode>
-      <!-- eslint-enable -->
+     
 
       <h4>
         '1-2-2' grid
@@ -725,10 +733,12 @@
 
   import useKResponsiveWindow from '../../lib/composables/useKResponsiveWindow';
   import DocsKCard from '../pages-components/DocsKCard';
+  import DocsExample from '../common/DocsExample'; // Corrected the import typo
 
   export default {
     components: {
       DocsKCard,
+      DocsExample,
     },
     setup() {
       const { windowBreakpoint } = useKResponsiveWindow();
@@ -737,7 +747,7 @@
     data() {
       return {
         debug: false,
-        loading: true,
+      loading: true, // Your loading state
         skeletonsConfig1: [
           {
             breakpoints: [0, 1, 2, 3, 4, 5, 6, 7],
@@ -873,6 +883,7 @@
           this.loading = false;
         }, 500);
       },
+     
       load1200() {
         this.loading = true;
         setTimeout(() => {
