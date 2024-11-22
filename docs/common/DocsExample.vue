@@ -46,7 +46,7 @@
       margin-bottom: 24px;
       padding-top: 0;
       padding: 20px;
-      border: 1px solid #ddd;
+      /* border: 1px solid #ddd; */
       border-radius: 4px;
     }
     
@@ -70,8 +70,11 @@
       background-color: #0056b3;
     }
     
+    
     .code-container {
      border: none;
+     transition: all 2s ease-in-out; /* Adjusted duration for smoother transition */
+
     }
     </style>
     
