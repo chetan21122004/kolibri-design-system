@@ -5,6 +5,125 @@ Changelog is rather internal in nature. See release notes for the public overvie
 ## Upcoming version 5.x.x (`develop` branch)
 
 <!-- [DO NOT REMOVE-USED BY GH ACTION] PASTE CHANGELOG -->
+[#836]
+  - **Description:** Added the `DocsExample` component, enabling toggling between an example and its code.
+  - **Products impact:** new API - introduces `DocsExample` component with toggle functionality.
+  - **Addresses:** #826
+  - **Components:** DocsExample, KIconButton
+  - **Breaking:** no
+  - **Impacts a11y:** no
+  - **Guidance:** Enhances documentation UI with the ability to toggle between example and code, improving the visual and user experience. Future improvements are expected for better accessibility and UX.
+
+[#836]: https://github.com/learningequality/kolibri-design-system/pull/836
+
+
+- [#844]
+  - **Description:** Bump kds version to 5.0.0-rc10.
+  - **Products impact:** -.
+  - **Addresses:** -.
+  - **Components:** -.
+  - **Breaking:** -.
+  - **Impacts a11y:** -.
+  - **Guidance:** -.
+
+[#844]: https://github.com/learningequality/kolibri-design-system/pull/844
+
+
+
+- [#843]
+  - **Description:** Restore value watcher to update selection in KSelect
+  - **Products impact:** bugfix
+  - **Addresses:** https://github.com/learningequality/kolibri/issues/12821
+  - **Components:** KSelect
+  - **Breaking:** no
+  - **Impacts a11y:** no
+  - **Guidance:** Fixes a regression
+
+[#843]: https://github.com/learningequality/kolibri-design-system/pull/843
+
+
+
+- [#831]
+  - **Description:** Creates the initial KToolbar component as a direct port of UiToolbar
+  - **Products impact:** new API, removed API - adds KToolbar, removes UiToolbar from the keen dir
+  - **Addresses:** N/A
+  - **Components:** UiToolbar, KToolbar
+  - **Breaking:** yes
+  - **Impacts a11y:** no
+  - **Guidance:** Creates initial KToolbar component as a port of UiToolbar. Further changes and iterations to API expected.
+
+[#831]: https://github.com/learningequality/kolibri-design-system/pull/831
+
+
+
+- [#825]
+  - **Description:** Make the `title` prop required
+  - **Products impact:** updated API
+  - **Addresses:** A new use-case in Studio in https://github.com/learningequality/studio/pull/4803 where a side panel needs to be toggled on card click without changing URL.
+  - **Components:** KCard
+  - **Breaking:** yes
+  - **Impacts a11y:** no
+  - **Guidance:** Even if you use the `title` slot, pass the title text via the `title` prop.
+
+[#825]: https://github.com/learningequality/kolibri-design-system/pull/825
+
+- [#825]
+  - **Description:** Change the `title` slot into a scoped slot
+  - **Products impact:** updated API
+  - **Addresses:** A new use-case in Studio in https://github.com/learningequality/studio/pull/4803 where a side panel needs to be toggled on card click without changing URL.
+  - **Components:** KCard
+  - **Breaking:** no
+  - **Impacts a11y:** no
+  - **Guidance:**  Consider using the slot's `textTitle` attribute to achieve more intuitive code when customizing the title.
+
+[#825]: https://github.com/learningequality/kolibri-design-system/pull/825
+
+- [#825]
+  - **Description:** Emit `click` event when card is clicked.
+  - **Products impact:** updated API
+  - **Addresses:** A new use-case in Studio in https://github.com/learningequality/studio/pull/4803 where a side panel needs to be toggled on card click without changing URL.
+  - **Components:** KCard
+  - **Breaking:** no
+  - **Impacts a11y:** no
+  - **Guidance:** -
+
+[#825]: https://github.com/learningequality/kolibri-design-system/pull/825
+
+- [#825]
+  - **Description:** Make `to` prop optional and when not provided, do not render the title text as `router-link` but rather as `span`.
+  - **Products impact:** updated API
+  - **Addresses:** A new use-case in Studio in https://github.com/learningequality/studio/pull/4803 where a side panel needs to be toggled on card click without changing URL.
+  - **Components:** KCard
+  - **Breaking:** no
+  - **Impacts a11y:** no
+  - **Guidance:** -
+
+[#825]: https://github.com/learningequality/kolibri-design-system/pull/825
+
+- [#825]
+  - **Description:** Ensure reliable screen readers announcements no matter whether card is link or no, and no matter whether the title is customized via the title slot
+  - **Products impact:** bugfix
+  - **Addresses:** A new use-case in Studio in https://github.com/learningequality/studio/pull/4803 where a side panel needs to be toggled on card click without changing URL.
+  - **Components:** KCard
+  - **Breaking:** no
+  - **Impacts a11y:** yes
+  - **Guidance:** -
+
+[#825]: https://github.com/learningequality/kolibri-design-system/pull/825
+
+
+
+- [#818]
+  - **Description:** keyboard navigation on KDropdownMenu
+  - **Products impact:** bugfix.
+  - **Addresses:**Issues with keyboard navigation on KDropdownMenu #588.
+  - **Components:** kDropdownMenu.vue
+  - **Breaking:** -
+  - **Impacts a11y:** -
+  - **Guidance:** -
+
+[#818]: https://github.com/learningequality/kolibri-design-system/pull/818
+
 
 
 - [#827]
@@ -689,7 +808,7 @@ Changelog is rather internal in nature. See release notes for the public overvie
 [#741]: https://github.com/learningequality/kolibri-design-system/pull/751
 
 - [#650]
-  - **Description:** Add `KRadioButtonGroup` component to fix keyboard navigation in radio button groups in Firefox 
+  - **Description:** Add `KRadioButtonGroup` component to fix keyboard navigation in radio button groups in Firefox
   - **Products impact:** New API
   - **Addresses:** https://github.com/learningequality/kolibri/issues/10491
   - **Components:** `KRadioButtonGroup`
@@ -747,9 +866,9 @@ Changelog is rather internal in nature. See release notes for the public overvie
 
 - [705]
   - **Description:**  Update`KCard`  updates: Adds 'preserveAboveTitle`, `preserveBelowTitle`, `preserveFooter` prop for flexible  slot management.
-  - **Products impact:**  Card updates 
+  - **Products impact:**  Card updates
   - **Addresses:** https://github.com/learningequality/kolibri-design-system/issues/702
-  - **Components:** `KCard` 
+  - **Components:** `KCard`
   - **Breaking:** N0
   - **Impacts a11y:** No
   - **Guidance:**
@@ -779,7 +898,7 @@ Changelog is rather internal in nature. See release notes for the public overvie
 [#718]: https://github.com/learningequality/kolibri-design-system/pull/718
 
 - [#687]
-  - **Description:** Adds logic that inserts ARIA live assertive and polite regions to an application's document body during KDS initialization and documents this on the new "Installation" page. Relatedly adds `useKLiveRegion` composable with public methods for updating the live regions with assertive and polite messages. 
+  - **Description:** Adds logic that inserts ARIA live assertive and polite regions to an application's document body during KDS initialization and documents this on the new "Installation" page. Relatedly adds `useKLiveRegion` composable with public methods for updating the live regions with assertive and polite messages.
   - **Products impact:** new API
   - **Addresses:** https://github.com/learningequality/kolibri-design-system/issues/668
   - **Components:** `useKLiveRegion`
@@ -790,10 +909,10 @@ Changelog is rather internal in nature. See release notes for the public overvie
 [#687]: https://github.com/learningequality/kolibri-design-system/pull/687
 
 - [#688]
-  - **Description:**  Update`KCard` styling 
-  - **Products impact:**  Card updates 
-  - **Addresses:** 
-  - **Components:** `KCard` 
+  - **Description:**  Update`KCard` styling
+  - **Products impact:**  Card updates
+  - **Addresses:**
+  - **Components:** `KCard`
   - **Breaking:** N0
   - **Impacts a11y:** No
   - **Guidance:**
@@ -802,7 +921,7 @@ Changelog is rather internal in nature. See release notes for the public overvie
 
 - [#707]
   - **Description:** Card Validations
-  - **Products impact:**  
+  - **Products impact:**
   - **Addresses:** [#695](https://github.com/learningequality/kolibri-design-system/issues/695)
   - **Components:** `KCard`
   - **Breaking:** No
@@ -812,10 +931,10 @@ Changelog is rather internal in nature. See release notes for the public overvie
 [#707]: https://github.com/learningequality/kolibri-design-system/pull/707
 
 - [#706]
-  - **Description:** Add new alignment options to `KCard` 
-  - **Products impact:**  new alignment 
+  - **Description:** Add new alignment options to `KCard`
+  - **Products impact:**  new alignment
   - **Addresses:** [#701](https://github.com/learningequality/kolibri-design-system/issues/701)
-  - **Components:** `KCard` 
+  - **Components:** `KCard`
   - **Breaking:** N0
   - **Impacts a11y:** No
   - **Guidance:**
@@ -824,10 +943,10 @@ Changelog is rather internal in nature. See release notes for the public overvie
 
 
 - [#709]
-  - **Description:**  Update spaces to the latest design`KCard` 
-  - **Products impact:**  Card updates 
+  - **Description:**  Update spaces to the latest design`KCard`
+  - **Products impact:**  Card updates
   - **Addresses:** [#704](https://github.com/learningequality/kolibri-design-system/issues/704)
-  - **Components:** `KCard` 
+  - **Components:** `KCard`
   - **Breaking:** N0
   - **Impacts a11y:** No
   - **Guidance:**
@@ -1021,7 +1140,7 @@ Changelog is rather internal in nature. See release notes for the public overvie
   - **Components:** KModal.
   - **Breaking:** no
   - **Impacts a11y:** no
-  - **Guidance:** 
+  - **Guidance:**
 
 - [#680]
   - **Description:** Fixes the calculation of overflowed items when changes in the size of the list item slots occur.
@@ -1030,7 +1149,7 @@ Changelog is rather internal in nature. See release notes for the public overvie
   - **Components:** KListWithOverflow.
   - **Breaking:** no
   - **Impacts a11y:** no
-  - **Guidance:** 
+  - **Guidance:**
 
 [#680]: https://github.com/learningequality/kolibri-design-system/pull/680
 
