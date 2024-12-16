@@ -17,6 +17,19 @@ Changelog is rather internal in nature. See release notes for the public overvie
 [#836]: https://github.com/learningequality/kolibri-design-system/pull/836
 
 
+- [#872]
+  - **Description:** Adds the global title attribute to `KBreadcrumbs` so that the truncated text can be seen fully when a breadcrumb item is hovered.
+  - **Products impact:** UX/UI update
+  - **Addresses:** https://github.com/learningequality/kolibri-design-system/issues/208
+  - **Components:** `KBreadcrumbs`
+  - **Breaking:**  no
+  - **Impacts a11y:** Yes. Improves experience for sighted users.
+  - **Guidance:**  -
+
+[#872]: https://github.com/learningequality/kolibri-design-system/pull/872
+
+
+
 - [#868]
   - **Description:** Revert regression in KLogo display
   - **Products impact:** bugfix
